@@ -29,18 +29,17 @@ where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 include $(REQUIRE_TOOLS)/driver.makefile
 
- APP:=simDetectorApp
- APPDB:=$(APP)/Db
- APPSRC:=$(APP)/src
+APP:=simDetectorApp
+APPDB:=$(APP)/Db
+APPSRC:=$(APP)/src
 
+USR_INCLUDES += -I$(where_am_I)/$(APPSRC)
 
- USR_INCLUDES += -I$(where_am_I)/$(APPSRC)
+TEMPLATES += $(APPDB)/simDetector.template
 
- TEMPLATES += $(APPDB)/simDetector.templalte
+HEADERS   += $(APPSRC)/simDetector.h
 
- HEADERS += $(APPSRC)/simDetector.h
-
- DBDS += $(APPSRC)/simDetectorSupport.dbd
+DBDS      += $(APPSRC)/simDetectorSupport.dbd
 
 
 
