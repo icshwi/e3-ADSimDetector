@@ -33,12 +33,12 @@ APP:=simDetectorApp
 APPDB:=$(APP)/Db
 APPSRC:=$(APP)/src
 
-USR_INCLUDES += -I$(where_am_I)/$(APPSRC)
+USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
 TEMPLATES += $(APPDB)/simDetector.template
 
 HEADERS   += $(APPSRC)/simDetector.h
-
+SOURCES   += $(APPSRC)/simDetector.cpp
 DBDS      += $(APPSRC)/simDetectorSupport.dbd
 
 
