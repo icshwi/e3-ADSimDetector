@@ -1,4 +1,4 @@
 [submodule "ADSimDetector"]
 	path = ADSimDetector
 	url = https://github.com/areaDetector/ADSimDetector
-	ignore = all
+	ignore = dirty
