@@ -1,5 +1,6 @@
 #
-#  Copyright (c) 2017 - Present  European Spallation Source ERIC
+#  Copyright (c) 2019            Jeong Han Lee
+#  Copyright (c) 2017 - 2019     European Spallation Source ERIC
 #
 #  The program is free software: you can redistribute
 #  it and/or modify it under the terms of the GNU General Public License
@@ -19,8 +20,8 @@
 #           Jeong Han Lee
 # email   : tomaszbrys@esss.se
 #           jeonghan.lee@gmail.com
-# Date    : Thursday, September 13 22:54:48 CEST 2018
-# version : 0.0.1
+# Date    : Thursday, March 28 22:29:20 CET 2019
+# version : 0.0.2
 #
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
@@ -56,6 +57,7 @@ DBDS      += $(APPSRC)/simDetectorSupport.dbd
 # db rule is the default in RULES_E3, so add the empty one
 
 db:
+.PHONY: db
 #
 .PHONY: vlibs
 vlibs:
