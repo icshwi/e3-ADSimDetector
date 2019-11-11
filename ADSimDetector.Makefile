@@ -20,8 +20,8 @@
 #           Jeong Han Lee
 # email   : tomaszbrys@esss.se
 #           jeonghan.lee@gmail.com
-# Date    : Thursday, March 28 22:29:20 CET 2019
-# version : 0.0.2
+# Date    : Monday, November  4 16:50:33 CET 2019
+# version : 0.0.3
 #
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
@@ -44,17 +44,12 @@ APPSRC:=$(APP)/src
 USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
 TEMPLATES += $(APPDB)/simDetector.template
+TEMPLATES += $(APPDB)/simDetector_settings.req
 
 HEADERS   += $(APPSRC)/simDetector.h
 SOURCES   += $(APPSRC)/simDetector.cpp
 DBDS      += $(APPSRC)/simDetectorSupport.dbd
 
-
-
-
-
-
-# db rule is the default in RULES_E3, so add the empty one
 
 db:
 .PHONY: db
